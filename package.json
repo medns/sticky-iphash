@@ -1,7 +1,7 @@
 {
   "name": "sticky-iphash",
-  "version": "1.0.0",
-  "main" : "sticky.js",
+  "version": "1.0.1",
+  "main": "sticky.js",
   "description": "为 Node.js 增加 ip-hash 负载均衡策略，拥有相同远端地址（IPv4/v6）的连接会被分发到相同的进程",
   "author": {
     "name": "Superzheng",
@@ -17,8 +17,11 @@
     "cluster",
     "iphash"
   ],
+  "dependencies": {
+    "semver": "5.6.0"
+  },
   "engines": {
     "node": ">=7.5.x"
   },
-  "license" : "MIT"
+  "license": "MIT"
 }
