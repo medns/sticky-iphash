@@ -1,15 +1,19 @@
 const assert = require('assert');
 const cluster = require('cluster');
 
+const semver = require('semver');
+const pkg = require('./package.json');
+
 let RoundRobinHandle;
 let rr_prototype;
 
 const init = () => {
     if (!RoundRobinHandle) {
+        assert(semver.satisfies(process.version, pkg.engines.node), `Node.js version must be ${pkg.engines.node}`);
         try {
             RoundRobinHandle = require('internal/cluster/round_robin_handle');
         } catch (e) {
-            assert.fail('Sticky-iphash requires node started with the --expose-internals flag');
+            assert.fail('Sticky-iphash requires Node.js started with the --expose-internals flag');
         }
     }
 };
