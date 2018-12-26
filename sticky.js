@@ -4,8 +4,8 @@ const cluster = require('cluster');
 const semver = require('semver');
 const pkg = require('./package.json');
 
-let RoundRobinHandle;
-let rr_prototype;
+var RoundRobinHandle;
+var rr_prototype;
 
 const init = () => {
     if (!RoundRobinHandle) {
