@@ -6,7 +6,7 @@
 
 模块对上层完全透明，开启后直接使用 Node.js [cluster](https://nodejs.org/dist/latest/docs/api/cluster.html) 启动多进程，支持 `cluster` 模块所有提供的特性。
 
-__使用此模块时，Node.js 在启动时需开启 `--expose-internals` 标志位。__
+__使用此模块时，Node.js 在启动时需开启 `--expose_internals` 标志位。__
 
 Node.js 版本需大于 v7.5.x
 
@@ -59,8 +59,8 @@ if (cluster.isMaster) {
 }
 ```
 
-使用 `--expose-internals` 标志位启动 Node.js 
+使用 `--expose_internals` 标志位启动 Node.js 
 
 ``` bash
-node --expose-internals server.js
+node --expose_internals server.js
 ```

@@ -1,6 +1,6 @@
 {
   "name": "sticky-iphash",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "sticky.js",
   "description": "为 Node.js 增加 ip-hash 负载均衡策略，拥有相同远端地址（IPv4/v6）的连接会被分发到相同的进程",
   "author": {
